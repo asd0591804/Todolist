@@ -1,0 +1,30 @@
+<p>list works!</p>
+<header>
+  Add new Todo List
+</header>
+<form>
+  <p>
+    待完成任務：<input type="text" name="todoTitle" [(ngModel)]="newTodo">
+  <button (click)="onInsertTitle()"> 新增 </button>
+  </p>
+</form>
+<table>
+  <thead>
+    <tr>
+      <th>todoTitle</th>
+      <th>todoComplete</th>
+      <th>Delete</th>
+    </tr>
+  </thead>
+  <tbody *ngFor="let todo of todoList">
+    <tr *ngIf="!todo.isComplete && !todo.isDelete">
+      <td>{{todo.title}}</td>
+      <td>{{todo.isComplete}}
+        <button (click)="onUpdateTodo(todo)">完成</button>
+      </td>
+      <td>{{todo.isDelete}}
+        <button (click)="onUpdateDel(todo)">刪除</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

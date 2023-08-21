@@ -1,7 +1,7 @@
-import { Todolist } from './todolist';
+import { Todo } from './todolist';
 
 describe('Todolist', () => {
   it('should create an instance', () => {
-    expect(new Todolist()).toBeTruthy();
+    expect(new Todo()).toBeTruthy();
   });
 });

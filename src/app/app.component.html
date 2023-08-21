@@ -1,4 +1,4 @@
-<header>
+<!-- <header>
   Add new Todo List
 </header>
 <form>
@@ -43,9 +43,9 @@
         <td>已完成</td>
     </tr>
   </tbody>
-</table>
+</table> -->
 
-<div>
+<!-- <div>
 <button *ngIf="!isDeletedState" (click)="onUpdateDisplay()"> 打開垃圾桶</button>
 <button *ngIf="isDeletedState" (click)="onUpdateDisplay()"> 關閉垃圾桶</button>
 </div>
@@ -65,6 +65,18 @@
     </tr>
   </tbody>
 
-</table>
+</table> -->
 
+<!--
+<li>
+  <a [routerLink]="['/todolist']"]>清單</a>
+</li> -->
 
+<li>choose list
+  <br>
+  <button [routerLink]="['/list']"> Todo list </button>
+  <button [routerLink]="['/completelist']"> Complete list </button>
+  <button [routerLink]="['/deletelist']"> Delete list </button>
+</li>
+
+<router-outlet></router-outlet>

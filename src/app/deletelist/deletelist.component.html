@@ -1,0 +1,20 @@
+<p>deletelist works!</p>
+
+
+  <table>
+    <thead>
+      <tr>
+        <th>todoTitle</th>
+        <th>Complete</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let todo of todoList">
+      <tr *ngIf="todo.isDelete">
+          <td>{{todo.title}}</td>
+          <td>已刪除
+          <button (click)="onDeleteTodo(todo.title)">永久刪除</button>
+          </td>
+      </tr>
+    </tbody>
+
+  </table>
